@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            background-color: #eeeeee;
+            width: 800px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .nav {
+            background-color: #cccccc;
+            height: fit-content;
+            width: 15em;
+
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article {
+            background-color: #aaaaaa;
+            margin-bottom: 2em;
+        }
+
+        .footer {
+            background-color: #cccccc;
+        }
+
+        .img {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="main">
+        <div class="nav">
+            <b>Блок навигации</b>
+            <ul>
+                <li>Ширина 15ем.</li>
+                <li>Должен присутствовать цвет фона.</li>
+                <li>Распологается слева</li>
+                <li>Блок навигации наполните <br>
+                    контентом достаточным,<br>
+                    чтобы по высоте он начинал<br>
+                    захватывать второю статью,<br>
+                    как показано в данном примере.
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="article">
+                <b>Статья 1</b>
+                <br>
+                <br>
+                Размер блока:<br>
+                Занимают всю ширину<br>
+                Должен присутствовать цвет фона<br>
+                Во всех статьях сделайте отступ снизу от соседей равным 2ем,<br>
+                При помощи margin-bottom
+            </div>
+            <div class="article">
+                <b>Статья 2</b>
+                <br>
+                <br>
+                Размер блока:<br>
+                Занимают всю ширину<br>
+                Должен присутствовать цвет фона<br>
+                Во всех статьях сделайте отступ снизу от соседей равным 2ем,<br>
+                При помощи margin-bottom. Картинка вставлена при помощи тега, плавание<br>
+                организованно по правому краю внутри данной статья для этой картинки.
+                <img src="icon_mail.png" class="img" alt="img">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Нижний блок, подвал. Занимает всю ширину. Высотаопределяется помещенным внутрь контентом.
+    </div>
+</div>
+</body>
+</html>
