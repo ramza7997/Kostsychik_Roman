@@ -7,6 +7,12 @@
             src="https://code.jquery.com/jquery-3.6.0.js"
             integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
             crossorigin="anonymous"></script>
+    <style>
+        .error {
+            border: red 1px solid;
+            outline: none;
+        }
+    </style>
 </head>
 <body>
 <form method="post" name="password" action="">
@@ -14,7 +20,7 @@
     <input type="password" class="password">
     <div>Повторите пароль:</div>
     <input type="password" class="password_2">
-    <div class="error"></div>
+    <div class="text"></div>
     <input type="submit" value="Отправить" id="submit">
 </form>
 <script>
@@ -22,11 +28,13 @@
         var value_input1 = $(".password").val();
         var value_input2 = $(this).val();
         if (value_input1 != value_input2) {
-            $(".error").html("Пароли не совпадают!");
+            $(".text").html("Пароли не совпадают!");
             $("#submit").attr("disabled", "disabled");
+            $("input[type='password']").addClass("error");
         } else {
             $("#submit").removeAttr("disabled");
-            $(".error").html("");
+            $(".text").html("");
+            $("input[type='password']").removeClass("error")
         }
     });
 </script>
